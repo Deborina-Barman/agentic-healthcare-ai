@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="760" viewBox="0 0 1600 760" role="img" aria-labelledby="title desc">
+  <title id="title">SevaCare AI active application architecture</title>
+  <desc id="desc">A diagram showing the active React frontend, FastAPI API, ChatController and LangGraph workflow, Gemini agents and FAISS retrieval, urgency model, voice service, and dashboard response.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07142d"/><stop offset="1" stop-color="#102d5a"/></linearGradient>
+    <linearGradient id="primary" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#4f46e5"/><stop offset="1" stop-color="#0ea5e9"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0f766e"/><stop offset="1" stop-color="#22c55e"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#020617" flood-opacity=".35"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#7dd3fc"/></marker>
+    <style>
+      .title { font: 700 38px Inter,Segoe UI,Arial,sans-serif; fill: #f8fafc; }
+      .subtitle { font: 400 18px Inter,Segoe UI,Arial,sans-serif; fill: #bfdbfe; }
+      .node-title { font: 700 21px Inter,Segoe UI,Arial,sans-serif; fill: #f8fafc; }
+      .node-copy { font: 400 15px Inter,Segoe UI,Arial,sans-serif; fill: #dbeafe; }
+      .label { font: 600 14px Inter,Segoe UI,Arial,sans-serif; fill: #bae6fd; }
+      .line { stroke: #7dd3fc; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="1600" height="760" fill="url(#bg)"/>
+  <circle cx="1450" cy="105" r="230" fill="#0ea5e9" opacity=".08"/>
+  <circle cx="90" cy="700" r="260" fill="#4f46e5" opacity=".10"/>
+  <text x="80" y="78" class="title">SevaCare AI · Active Application Architecture</text>
+  <text x="80" y="110" class="subtitle">Stateful clinical intake orchestration with retrieval, generation, urgency signals, and a clinician-facing dashboard</text>
+
+  <g filter="url(#shadow)">
+    <rect x="80" y="205" width="250" height="160" rx="22" fill="url(#primary)"/>
+    <text x="110" y="258" class="node-title">React frontend</text>
+    <text x="110" y="290" class="node-copy">Text intake · microphone</text>
+    <text x="110" y="316" class="node-copy">Report upload · dashboard</text>
+    <text x="110" y="342" class="node-copy">Client-side PDF export</text>
+
+    <rect x="445" y="205" width="250" height="160" rx="22" fill="#163b70" stroke="#38bdf8" stroke-width="2"/>
+    <text x="475" y="258" class="node-title">FastAPI</text>
+    <text x="475" y="290" class="node-copy">/chat · /upload · /voice</text>
+    <text x="475" y="316" class="node-copy">/summary · /reset</text>
+    <text x="475" y="342" class="node-copy">Response normalization</text>
+
+    <rect x="810" y="185" width="310" height="200" rx="22" fill="#1e3a8a" stroke="#a5b4fc" stroke-width="2"/>
+    <text x="840" y="238" class="node-title">ChatController + LangGraph</text>
+    <text x="840" y="270" class="node-copy">extract information</text>
+    <text x="840" y="296" class="node-copy">question or summary routing</text>
+    <text x="840" y="322" class="node-copy">NLICE and workflow state</text>
+    <text x="840" y="348" class="node-copy">stateful conversation control</text>
+
+    <rect x="1250" y="205" width="270" height="160" rx="22" fill="url(#accent)"/>
+    <text x="1280" y="258" class="node-title">Unified dashboard</text>
+    <text x="1280" y="290" class="node-copy">Summary · timeline · triage</text>
+    <text x="1280" y="316" class="node-copy">Adaptive clinical modules</text>
+    <text x="1280" y="342" class="node-copy">Clinician handoff view</text>
+
+    <rect x="470" y="515" width="250" height="130" rx="22" fill="#17365d" stroke="#2dd4bf" stroke-width="2"/>
+    <text x="500" y="563" class="node-title">Voice service</text>
+    <text x="500" y="592" class="node-copy">Faster-Whisper small</text>
+    <text x="500" y="618" class="node-copy">Audio → transcript</text>
+
+    <rect x="810" y="495" width="310" height="170" rx="22" fill="#17365d" stroke="#67e8f9" stroke-width="2"/>
+    <text x="840" y="543" class="node-title">AI and retrieval services</text>
+    <text x="840" y="572" class="node-copy">Gemini follow-up and context</text>
+    <text x="840" y="598" class="node-copy">FAISS + MiniLM Followup-Q</text>
+    <text x="840" y="624" class="node-copy">Gemini vision reader</text>
+
+    <rect x="1250" y="515" width="270" height="130" rx="22" fill="#17365d" stroke="#fbbf24" stroke-width="2"/>
+    <text x="1280" y="563" class="node-title">Urgency signal</text>
+    <text x="1280" y="592" class="node-copy">Random Forest + rules</text>
+    <text x="1280" y="618" class="node-copy">NLICE feature inputs</text>
+  </g>
+
+  <path d="M330 285H445" class="line"/><text x="355" y="268" class="label">/chat</text>
+  <path d="M695 285H810" class="line"/><text x="720" y="268" class="label">controller</text>
+  <path d="M1120 285H1250" class="line"/><text x="1150" y="268" class="label">response</text>
+  <path d="M570 365V515" class="line"/><text x="590" y="444" class="label">/voice</text>
+  <path d="M965 385V495" class="line"/>
+  <path d="M1120 580H1250" class="line"/>
+  <path d="M720 580H810" class="line"/>
+</svg>
