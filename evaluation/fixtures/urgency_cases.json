@@ -1,0 +1,12 @@
+[
+  {"id": "urg_001", "state": {"nature": "sharp", "location": "chest", "intensity": 9, "chronology": "sudden", "excitation": "walking"}, "expected_label": "HIGH"},
+  {"id": "urg_002", "state": {"nature": "dull", "location": "head", "intensity": 4, "chronology": "hours", "excitation": "none"}, "expected_label": "LOW"},
+  {"id": "urg_003", "state": {"nature": "burning", "location": "abdomen", "intensity": 3, "chronology": "days", "excitation": "rest"}, "expected_label": "LOW"},
+  {"id": "urg_004", "state": {"nature": "cramping", "location": "abdomen", "intensity": 7, "chronology": "hours", "excitation": "movement"}, "expected_label": "MODERATE"},
+  {"id": "urg_005", "state": {"nature": "sharp", "location": "chest", "intensity": 8, "chronology": "days", "excitation": "rest"}, "expected_label": "HIGH"},
+  {"id": "urg_006", "state": {"nature": "fever", "location": "Systemic/General", "intensity": 6, "chronology": "3 days", "excitation": "none"}, "expected_label": "MODERATE"},
+  {"id": "urg_007", "state": {"nature": "throbbing", "location": "head", "intensity": 8, "chronology": "hours", "excitation": "none"}, "expected_label": "MODERATE"},
+  {"id": "urg_008", "state": {"nature": "pain", "location": "back", "intensity": 2, "chronology": "yesterday", "excitation": "rest"}, "expected_label": "LOW"},
+  {"id": "urg_009", "state": {"nature": "pressure", "location": "chest", "intensity": 10, "chronology": "sudden", "excitation": "rest"}, "expected_label": "EMERGENCY"},
+  {"id": "urg_010", "state": {"nature": "sharp", "location": "abdomen", "intensity": 5, "chronology": "hours", "excitation": "movement"}, "expected_label": "MODERATE"}
+]

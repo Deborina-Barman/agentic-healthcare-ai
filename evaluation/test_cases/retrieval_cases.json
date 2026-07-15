@@ -1,0 +1,18 @@
+[
+  {
+    "query": "hydration_status",
+    "expected_examples": [
+      "hydration question",
+      "dehydration question"
+    ],
+    "top_k": 3
+  },
+  {
+    "query": "medication_response",
+    "expected_examples": [
+      "medication response",
+      "fever medicine"
+    ],
+    "top_k": 3
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "id": "ocr_001",
+    "name": "basic_labs",
+    "text": "Hemoglobin 13.2, WBC 6.1, Platelets 250, Glucose 98, Creatinine 0.9",
+    "expected_values": {
+      "Hemoglobin": "13.2",
+      "WBC": "6.1",
+      "Platelets": "250",
+      "Glucose": "98",
+      "Creatinine": "0.9"
+    }
+  }
+]

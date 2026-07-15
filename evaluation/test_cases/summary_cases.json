@@ -1,0 +1,26 @@
+[
+  {
+    "id": "summary_001",
+    "state": {
+      "complaint": "Sharp chest pain",
+      "age_gender": "32-year-old male",
+      "patient_answers": {
+        "pain duration": "2 days",
+        "medications": "acetaminophen"
+      },
+      "medications": "acetaminophen",
+      "allergies": "none",
+      "past_history": "none",
+      "urgency": "High",
+      "clinical_context": "Chest pain reported"
+    },
+    "expected": {
+      "complaint_captured": true,
+      "duration_captured": true,
+      "medication_captured": true,
+      "medication_response_captured": false,
+      "negative_findings_correct": true,
+      "hallucinated_findings": false
+    }
+  }
+]

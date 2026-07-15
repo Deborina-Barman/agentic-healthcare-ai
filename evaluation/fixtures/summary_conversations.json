@@ -1,0 +1,48 @@
+[
+  {
+    "id": "summary_001",
+    "conversation": [
+      {"role": "user", "content": "I have a sharp chest pain for 2 days."},
+      {"role": "assistant", "content": "How severe is it on a scale of 1 to 10?"}
+    ],
+    "clinical_state": {
+      "complaint": "sharp chest pain",
+      "nlice": {"nature": "sharp", "location": "chest", "intensity": "8", "chronology": "2 days", "excitation": "walking"},
+      "medications": "acetaminophen",
+      "allergies": "none",
+      "past_history": "none",
+      "urgency": "High"
+    },
+    "expected": {
+      "complaint_captured": true,
+      "duration_captured": true,
+      "medication_captured": true,
+      "medication_response_captured": false,
+      "negative_findings_correct": true,
+      "hallucinated_findings": false
+    }
+  },
+  {
+    "id": "summary_002",
+    "conversation": [
+      {"role": "user", "content": "I have a fever and cough for 3 days."},
+      {"role": "assistant", "content": "Any shortness of breath?"}
+    ],
+    "clinical_state": {
+      "complaint": "fever and cough",
+      "nlice": {"nature": "fever", "location": "Systemic/General", "intensity": "7", "chronology": "3 days", "excitation": "none"},
+      "medications": "ibuprofen",
+      "allergies": "penicillin",
+      "past_history": "asthma",
+      "urgency": "Moderate"
+    },
+    "expected": {
+      "complaint_captured": true,
+      "duration_captured": true,
+      "medication_captured": true,
+      "medication_response_captured": false,
+      "negative_findings_correct": true,
+      "hallucinated_findings": false
+    }
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {"id": "ret_001", "query": "hydration_status", "expected_terms": ["hydration", "dehydration", "fluid"]},
+  {"id": "ret_002", "query": "medication_response", "expected_terms": ["medication", "response", "fever"]},
+  {"id": "ret_003", "query": "danger_red_flags", "expected_terms": ["chest pain", "shortness of breath", "red flags"]},
+  {"id": "ret_004", "query": "vomiting_diarrhea", "expected_terms": ["vomiting", "diarrhea", "dehydration"]},
+  {"id": "ret_005", "query": "associated_respiratory_symptoms", "expected_terms": ["cough", "sore throat", "congestion"]},
+  {"id": "ret_006", "query": "medication_taken", "expected_terms": ["acetaminophen", "ibuprofen", "medicine"]},
+  {"id": "ret_007", "query": "temperature_max", "expected_terms": ["fever", "temperature", "high"]},
+  {"id": "ret_008", "query": "duration", "expected_terms": ["duration", "hours", "days"]},
+  {"id": "ret_009", "query": "exposure_infection", "expected_terms": ["exposure", "sick contacts", "travel"]},
+  {"id": "ret_010", "query": "hydration status", "expected_terms": ["hydration", "urine", "fluids"]}
+]

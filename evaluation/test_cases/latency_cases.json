@@ -1,0 +1,10 @@
+[
+  {
+    "id": "latency_001",
+    "patient_complaint": "sharp chest pain for 2 days"
+  },
+  {
+    "id": "latency_002",
+    "patient_complaint": "fever and cough"
+  }
+]

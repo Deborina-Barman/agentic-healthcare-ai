@@ -1,6 +1,11 @@
 google-genai
+langgraph
+langchain-core
 python-dotenv
 pillow
 pandas
 scikit-learn
 joblib
+fastapi
+uvicorn
+python-multipart

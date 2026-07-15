@@ -1,0 +1,62 @@
+[
+  {
+    "id": "nlice_001",
+    "patient_utterance": "I have a sharp chest pain for 2 days.",
+    "expected_nlice": {"nature": "sharp", "location": "chest", "chronology": "2 days"},
+    "expected_urgency": "high"
+  },
+  {
+    "id": "nlice_002",
+    "patient_utterance": "The pain is dull and is mostly in my head, started 3 hours ago.",
+    "expected_nlice": {"nature": "dull", "location": "head", "chronology": "3 hours"},
+    "expected_urgency": "moderate"
+  },
+  {
+    "id": "nlice_003",
+    "patient_utterance": "I have a burning cough and chest tightness since yesterday.",
+    "expected_nlice": {"nature": "burning", "location": "chest", "chronology": "since yesterday"},
+    "expected_urgency": "moderate"
+  },
+  {
+    "id": "nlice_004",
+    "patient_utterance": "There is no chest pain, only a mild cough.",
+    "expected_nlice": {"nature": "mild", "location": "chest", "chronology": "unknown"},
+    "expected_urgency": "low"
+  },
+  {
+    "id": "nlice_005",
+    "patient_utterance": "My fever improved after taking acetaminophen.",
+    "expected_nlice": {"nature": "fever", "location": "systemic", "chronology": "unknown"},
+    "expected_urgency": "moderate"
+  },
+  {
+    "id": "nlice_006",
+    "patient_utterance": "The pain feels stabbing in my stomach for 2 weeks.",
+    "expected_nlice": {"nature": "stabbing", "location": "stomach", "chronology": "2 weeks"},
+    "expected_urgency": "moderate"
+  },
+  {
+    "id": "nlice_007",
+    "patient_utterance": "I have severe abdominal cramping that started this morning.",
+    "expected_nlice": {"nature": "cramping", "location": "abdomen", "chronology": "this morning"},
+    "expected_urgency": "moderate"
+  },
+  {
+    "id": "nlice_008",
+    "patient_utterance": "I am having a throbbing headache and dizziness for 6 hours.",
+    "expected_nlice": {"nature": "throbbing", "location": "head", "chronology": "6 hours"},
+    "expected_urgency": "moderate"
+  },
+  {
+    "id": "nlice_009",
+    "patient_utterance": "My back pain is worse after lifting, and it started yesterday.",
+    "expected_nlice": {"nature": "pain", "location": "back", "chronology": "yesterday"},
+    "expected_urgency": "low"
+  },
+  {
+    "id": "nlice_010",
+    "patient_utterance": "The chest pressure is worse when I walk and came on suddenly.",
+    "expected_nlice": {"nature": "pressure", "location": "chest", "chronology": "suddenly"},
+    "expected_urgency": "high"
+  }
+]

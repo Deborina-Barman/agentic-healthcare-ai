@@ -1,0 +1,12 @@
+[
+  {"id": "conv_001", "expected_completed": true, "required_fields": ["complaint", "duration", "urgency"], "summary_expected": true, "dashboard_expected": true},
+  {"id": "conv_002", "expected_completed": true, "required_fields": ["complaint", "duration", "urgency"], "summary_expected": true, "dashboard_expected": true},
+  {"id": "conv_003", "expected_completed": false, "required_fields": ["complaint", "duration", "urgency"], "summary_expected": false, "dashboard_expected": false},
+  {"id": "conv_004", "expected_completed": true, "required_fields": ["complaint", "duration", "urgency"], "summary_expected": true, "dashboard_expected": true},
+  {"id": "conv_005", "expected_completed": true, "required_fields": ["complaint", "duration", "urgency"], "summary_expected": true, "dashboard_expected": true},
+  {"id": "conv_006", "expected_completed": true, "required_fields": ["complaint", "duration", "urgency"], "summary_expected": true, "dashboard_expected": true},
+  {"id": "conv_007", "expected_completed": true, "required_fields": ["complaint", "duration", "urgency"], "summary_expected": true, "dashboard_expected": true},
+  {"id": "conv_008", "expected_completed": false, "required_fields": ["complaint", "duration", "urgency"], "summary_expected": false, "dashboard_expected": false},
+  {"id": "conv_009", "expected_completed": true, "required_fields": ["complaint", "duration", "urgency"], "summary_expected": true, "dashboard_expected": true},
+  {"id": "conv_010", "expected_completed": true, "required_fields": ["complaint", "duration", "urgency"], "summary_expected": true, "dashboard_expected": true}
+]

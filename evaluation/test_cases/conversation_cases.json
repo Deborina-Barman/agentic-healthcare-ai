@@ -1,0 +1,14 @@
+[
+  {
+    "id": "conv_001",
+    "name": "fever_intake",
+    "required_fields": ["complaint", "duration", "urgency"],
+    "expected_completed": true
+  },
+  {
+    "id": "conv_002",
+    "name": "incomplete_intake",
+    "required_fields": ["complaint", "duration", "urgency"],
+    "expected_completed": false
+  }
+]

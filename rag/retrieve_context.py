@@ -1,52 +1,54 @@
 from __future__ import annotations
-
-import json
+import pickle
 from pathlib import Path
-
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import cosine_similarity
-
+import faiss
+import numpy as np
+from sentence_transformers import SentenceTransformer
 
 BASE_DIR = Path(__file__).resolve().parents[1] / "data"
-DOCS_PATH = BASE_DIR / "symcat_documents.json"
+INDEX_PATH = BASE_DIR / "symcat_index.faiss"
+DOCS_PATH = BASE_DIR / "symcat_docs.pkl"
+MODEL_NAME = "all-MiniLM-L6-v2"
 
+# Global variables to prevent reloading
+_model = None
+_index = None
+_documents = None
 
-def _load_documents() -> list[str]:
-    """Load the JSON document corpus used for lightweight retrieval."""
-    with DOCS_PATH.open("r", encoding="utf-8") as handle:
-        documents = json.load(handle)
-
-    if not isinstance(documents, list):
-        raise ValueError("symcat_documents.json must contain a list of documents.")
-
-    return [str(document) for document in documents if str(document).strip()]
-
+def get_resources():
+    """Load model, index, and docs into memory once."""
+    global _model, _index, _documents
+    if _model is None:
+        _model = SentenceTransformer(MODEL_NAME)
+    if _index is None:
+        if INDEX_PATH.exists():
+            _index = faiss.read_index(str(INDEX_PATH))
+        else:
+            print("Warning: INDEX_PATH not found.")
+    if _documents is None:
+        if DOCS_PATH.exists():
+            with DOCS_PATH.open("rb") as handle:
+                _documents = pickle.load(handle)
+        else:
+            print("Warning: DOCS_PATH not found.")
+    return _model, _index, _documents
 
 def retrieve_context(query: str, k: int = 3) -> list[str]:
-    """
-    Retrieve the most relevant documents for a user query using TF-IDF.
-
-    This is a compatibility-friendly fallback approach that avoids FAISS and
-    dense vector indexes, making retrieval easier to run in environments where
-    native FAISS builds or precomputed indexes are not available.
-    """
-    documents = _load_documents()
-    if not documents or not query.strip():
+    if not query.strip():
         return []
 
-    # TF-IDF keeps the retrieval pipeline simple and portable while still
-    # providing useful keyword-aware similarity ranking for symptom queries.
-    vectorizer = TfidfVectorizer(stop_words="english")
-    document_matrix = vectorizer.fit_transform(documents)
-    query_vector = vectorizer.transform([query])
+    model, index, documents = get_resources()
+    
+    if index is None or documents is None:
+        return ["Medical knowledge base not available."]
 
-    similarities = cosine_similarity(query_vector, document_matrix).flatten()
-    top_indices = similarities.argsort()[::-1][:k]
+    # Search logic
+    query_embedding = model.encode([query], convert_to_numpy=True).astype("float32")
+    distances, indices = index.search(query_embedding, k)
 
-    return [documents[index] for index in top_indices if similarities[index] > 0]
-
-
-if __name__ == "__main__":
-    query = "sharp abdominal pain"
-    results = retrieve_context(query)
-    print(results)
+    results = []
+    for idx in indices[0]:
+        if idx < len(documents):
+            results.append(documents[idx])
+    
+    return results

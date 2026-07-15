@@ -1,0 +1,57 @@
+[
+  {
+    "id": "nlice_001",
+    "case_type": "fever",
+    "patient_text": "I have a sharp chest pain for 2 days.",
+    "expected_nlice": {
+      "nature": "sharp",
+      "location": "chest",
+      "chronology": "2 days"
+    },
+    "expected_urgency": "high"
+  },
+  {
+    "id": "nlice_002",
+    "case_type": "headache",
+    "patient_text": "I have a dull headache for 3 hours.",
+    "expected_nlice": {
+      "nature": "dull",
+      "location": "head",
+      "chronology": "3 hours"
+    },
+    "expected_urgency": "moderate"
+  },
+  {
+    "id": "nlice_003",
+    "case_type": "cough",
+    "patient_text": "I have a burning cough and my chest hurts.",
+    "expected_nlice": {
+      "nature": "burning",
+      "location": "chest",
+      "chronology": "unknown"
+    },
+    "expected_urgency": "moderate"
+  },
+  {
+    "id": "nlice_004",
+    "case_type": "negation",
+    "patient_text": "There is no chest pain, only a mild cough.",
+    "expected_nlice": {
+      "nature": "mild",
+      "location": "chest",
+      "chronology": "unknown"
+    },
+    "expected_urgency": "low"
+  },
+  {
+    "id": "nlice_005",
+    "case_type": "medication_history",
+    "patient_text": "My fever improved after taking acetaminophen.",
+    "expected_nlice": {
+      "nature": "fever",
+      "location": "systemic",
+      "chronology": "unknown"
+    },
+    "expected_urgency": "moderate"
+  }
+]
