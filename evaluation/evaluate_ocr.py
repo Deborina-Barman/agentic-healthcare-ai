@@ -44,9 +44,9 @@ def _import_ocr_pipeline() -> tuple[Any | None, list[str]]:
         errors.append(f"agents.reader_agent.vision_reader_agent not found: {exc}")
         return None, errors
     try:
-        importlib.import_module("services.gemini_vision_service")
+        importlib.import_module("services.paddle_ocr_service")
     except Exception as exc:
-        errors.append(f"Could not import services.gemini_vision_service: {exc}")
+        errors.append(f"Could not import services.paddle_ocr_service: {exc}")
     return vision_reader_agent, errors
 
 
@@ -57,7 +57,7 @@ def evaluate_ocr(path: Path | str | None = None) -> dict[str, Any]:
         return {
             "status": "skipped",
             "skipped_reason": "; ".join(import_errors),
-            "production_functions_called": ["agents.reader_agent.vision_reader_agent", "services.gemini_vision_service.read_prescription_with_gemini"],
+            "production_functions_called": ["agents.reader_agent.vision_reader_agent", "services.paddle_ocr_service.read_document_with_paddle", "services.gemini_information_extractor.extract_clinical_information"],
             "case_count": len(cases),
             "extraction_accuracy": None,
             "missing_fields": None,
@@ -80,7 +80,7 @@ def evaluate_ocr(path: Path | str | None = None) -> dict[str, Any]:
         except Exception as exc:
             results.append({"id": case.get("id"), "status": "skipped", "skipped_reason": str(exc)})
             continue
-        extracted_text = str(raw_result.get("vision_output", "") or "")
+        extracted_text = json.dumps(raw_result.get("vision_output", ""))
         extracted_values = _extract_from_text(extracted_text)
         for field in FIELD_NAMES:
             total_fields += 1
@@ -92,7 +92,7 @@ def evaluate_ocr(path: Path | str | None = None) -> dict[str, Any]:
                 incorrect_values += 1
         results.append({"id": case.get("id"), "expected_values": expected_values, "extracted_values": extracted_values, "missing_fields": missing_fields, "incorrect_values": incorrect_values, "status": "evaluated"})
     extraction_accuracy = 1.0 - (incorrect_values / total_fields) if total_fields else None
-    return {"status": "evaluated" if results else "skipped", "production_functions_called": ["agents.reader_agent.vision_reader_agent", "services.gemini_vision_service.read_prescription_with_gemini"], "case_count": len(cases), "extraction_accuracy": extraction_accuracy, "missing_fields": missing_fields, "incorrect_values": incorrect_values, "details": results}
+    return {"status": "evaluated" if results else "skipped", "production_functions_called": ["agents.reader_agent.vision_reader_agent", "services.paddle_ocr_service.read_document_with_paddle", "services.gemini_information_extractor.extract_clinical_information"], "case_count": len(cases), "extraction_accuracy": extraction_accuracy, "missing_fields": missing_fields, "incorrect_values": incorrect_values, "details": results}
 
 
 def main() -> None:

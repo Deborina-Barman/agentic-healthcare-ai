@@ -1,0 +1,29 @@
+Hospital:
+YourGP
+
+Doctor:
+Dr. Ajay Sahdev
+
+Date:
+24/04/2021
+
+Patient:
+Mr. Ajay Sethi
+
+Age/Gender:
+62/M
+
+Chief Complaint:
+COVID +ve
+
+Advice:
+
+Inj. Remdec
+200 mg STAT
+
+100 mg OD × 4 days
+
+Inj. Actemra
+400 mg OD × 2
+
+With a gap of 2 days

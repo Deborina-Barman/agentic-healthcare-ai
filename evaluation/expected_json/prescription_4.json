@@ -1,0 +1,29 @@
+{
+  "patient_name": "Ajay Sethi",
+  "age": "62",
+  "gender": "Male",
+  "doctor": "Dr. Ajay Sahdev",
+  "hospital": "YourGP",
+  "date": "24/04/2021",
+  "diagnosis": "COVID positive",
+  "medicines": [
+    {
+      "name": "Remdec",
+      "strength": "200 mg",
+      "frequency": "STAT"
+    },
+    {
+      "name": "Remdec",
+      "strength": "100 mg",
+      "frequency": "OD",
+      "duration": "4 days"
+    },
+    {
+      "name": "Actemra",
+      "strength": "400 mg",
+      "frequency": "OD",
+      "duration": "2 doses",
+      "notes": "Gap of 2 days"
+    }
+  ]
+}

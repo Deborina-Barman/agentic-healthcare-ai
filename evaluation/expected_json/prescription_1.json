@@ -1,0 +1,27 @@
+{
+  "patient_name": "Prathna",
+  "date": "15-03-2022",
+  "diagnosis": [
+    "Acute GE",
+    "Dehydration"
+  ],
+  "medicines": [
+    {
+      "name": "Oflazest OZ",
+      "frequency": "1-1"
+    },
+    {
+      "name": "Azevac MR",
+      "frequency": "1-1"
+    },
+    {
+      "name": "Andial",
+      "frequency": "Every 6 hours"
+    },
+    {
+      "name": "Zofer",
+      "frequency": "1-1"
+    }
+  ],
+  "duration": "3 days"
+}

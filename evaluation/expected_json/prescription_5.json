@@ -1,0 +1,17 @@
+{
+  "patient_name": "CH. Samuel",
+  "age": "62",
+  "gender": "Male",
+  "doctor": "Dr. Naveen Polavarapu",
+  "hospital": "Apollo Hospitals",
+  "date": "24/08/2021",
+  "diagnosis": [
+    "Severe sepsis",
+    "MODS",
+    "Likely lung abscess",
+    "Aspiration pneumonia"
+  ],
+  "admission_status": "Currently admitted in ICU",
+  "hospital_stay": "8-10 days",
+  "clinical_notes": "Patient is undergoing ICU treatment and requires continued hospitalization for complete recovery."
+}

@@ -1,0 +1,27 @@
+Hospital: Nanavati Super Speciality Hospital
+
+Patient Name: Mr. Subhash Kumar Kulshrestha
+
+Age: 73 Years
+
+Department:
+EICU / EICU
+
+Doctor:
+Dr. Amol Aandrao Patil (ENT)
+
+DOA:
+16/05/2021
+
+Prescription Date:
+16/05/2021
+
+Medicine:
+
+Injection Liposomal Amphotericin B
+
+Strength:
+50 mg
+
+Dosage:
+6 vials/day (300 mg)

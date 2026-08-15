@@ -1,0 +1,36 @@
+Hospital:
+The White Tusk Dental Clinic
+
+Date:
+12/10/2022
+
+Patient:
+Mr. Sachin Sansare
+
+Age/Gender:
+28/M
+
+Prescription:
+
+After Meals
+
+Tab. Augmentin 625 mg
+1-0-1
+5 days
+
+Tab. Enzoflam
+1-0-1
+5 days
+
+Before Meals
+
+Tab. Pan-D 40 mg
+1-0-0
+5 days
+
+Advice:
+
+Hexigel Gum Paint
+Massage
+1-0-1
+1 week

@@ -1,0 +1,18 @@
+{
+  "patient_name": "Subhash Kumar Kulshrestha",
+  "age": "73",
+  "gender": "Male",
+  "doctor": "Dr. Amol Aandrao Patil",
+  "hospital": "Nanavati Super Speciality Hospital",
+  "date": "16/05/2021",
+  "diagnosis": "",
+  "medicines": [
+    {
+      "name": "Liposomal Amphotericin B",
+      "strength": "50 mg",
+      "frequency": "6 vials/day",
+      "dosage": "300 mg"
+    }
+  ],
+  "clinical_notes": ""
+}

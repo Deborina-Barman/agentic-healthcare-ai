@@ -1,0 +1,24 @@
+Doctor: Dr. R. Keshwani
+Patient: Ms. Prathna
+Date: 15-03-2022
+
+Diagnosis:
+Acute GE
+Dehydration
+
+Medicines:
+
+1. Oflazest OZ
+   1 - 1
+
+2. Azevac MR
+   1 - 1
+
+3. Andial
+   Every 6 hours
+
+4. Zofer
+   1 - 1
+
+Duration:
+3 days

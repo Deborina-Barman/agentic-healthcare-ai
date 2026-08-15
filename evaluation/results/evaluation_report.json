@@ -1,0 +1,938 @@
+{
+  "status": "success",
+  "images_evaluated": 5,
+  "ocr": {
+    "average_cer": 1.1302051878353419,
+    "average_wer": 0.9752167832167832,
+    "average_latency_ms": 1691.8210983276367
+  },
+  "information_extraction": {
+    "field_accuracy": 0.16166666666666665,
+    "precision": 0.41666666666666663,
+    "recall": 0.2235714285714286,
+    "f1_score": 0.28434343434343434
+  },
+  "pipeline": {
+    "average_total_latency_ms": 11168.658256530762
+  },
+  "confusion_stats": {
+    "matched_after_normalization": 6,
+    "matched_by_fuzzy_similarity": 1,
+    "actually_incorrect": 17,
+    "missing": 27
+  },
+  "per_image_results": [
+    {
+      "image": "prescription_1",
+      "status": "success",
+      "ocr": {
+        "latency_ms": 2363.797664642334,
+        "cer": 1.8431372549019607,
+        "wer": 1.0,
+        "output_length": 466,
+        "ground_truth_length": 219
+      },
+      "information_extraction": {
+        "latency_ms": 9283.579587936401,
+        "field_accuracy": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "total_fields": 5,
+        "matched_fields": 0,
+        "missing_fields": [
+          "date",
+          "duration"
+        ],
+        "incorrect_fields": [
+          {
+            "field": "patient_name",
+            "expected": "Prathna",
+            "predicted": "ATH",
+            "similarity": 0.6,
+            "status": "genuinely_different"
+          },
+          {
+            "field": "diagnosis",
+            "expected": "['Acute GE', 'Dehydration']",
+            "predicted": "Acub Ge",
+            "similarity": 0.35294117647058826,
+            "status": "genuinely_different"
+          }
+        ]
+      },
+      "pipeline": {
+        "total_latency_ms": 11647.377252578735
+      },
+      "errors": [],
+      "error_analysis": [
+        {
+          "field": "patient_name",
+          "expected": "Prathna",
+          "predicted": "ATH",
+          "similarity": "60.00%",
+          "error_type": "value_mismatch",
+          "status": "genuinely_different"
+        },
+        {
+          "field": "date",
+          "expected": "15-03-2022",
+          "predicted": "(missing)",
+          "error_type": "missing",
+          "status": "field_not_extracted"
+        },
+        {
+          "field": "diagnosis",
+          "expected": "['Acute GE', 'Dehydration']",
+          "predicted": "Acub Ge",
+          "similarity": "35.29%",
+          "error_type": "value_mismatch",
+          "status": "genuinely_different"
+        },
+        {
+          "field": "medicines",
+          "medicine": "Azevac MR",
+          "error_type": "missing",
+          "status": "not_extracted"
+        },
+        {
+          "field": "medicines",
+          "medicine": "Andial",
+          "error_type": "missing",
+          "status": "not_extracted"
+        },
+        {
+          "field": "medicines",
+          "medicine": "Zofer",
+          "error_type": "missing",
+          "status": "not_extracted"
+        },
+        {
+          "field": "medicines",
+          "medicine": "TA AZENAC-NR",
+          "error_type": "extra",
+          "status": "hallucinated"
+        },
+        {
+          "field": "medicines",
+          "medicine": "TA ADIAL",
+          "error_type": "extra",
+          "status": "hallucinated"
+        },
+        {
+          "field": "medicines",
+          "medicine": "TAZOFEL",
+          "error_type": "extra",
+          "status": "hallucinated"
+        },
+        {
+          "field": "duration",
+          "expected": "3 days",
+          "predicted": "(missing)",
+          "error_type": "missing",
+          "status": "field_not_extracted"
+        }
+      ],
+      "confusion_stats": {
+        "matched_after_normalization": 0,
+        "matched_by_fuzzy_similarity": 0,
+        "actually_incorrect": 5,
+        "missing": 5
+      }
+    },
+    {
+      "image": "prescription_2",
+      "status": "success",
+      "ocr": {
+        "latency_ms": 868.7069416046143,
+        "cer": 0.6655518394648829,
+        "wer": 0.9615384615384616,
+        "output_length": 302,
+        "ground_truth_length": 309
+      },
+      "information_extraction": {
+        "latency_ms": 8804.04782295227,
+        "field_accuracy": 0.3333333333333333,
+        "precision": 1.0,
+        "recall": 0.375,
+        "f1_score": 0.5454545454545454,
+        "total_fields": 9,
+        "matched_fields": 3,
+        "missing_fields": [
+          "doctor",
+          "hospital",
+          "date",
+          "diagnosis",
+          "clinical_notes"
+        ],
+        "incorrect_fields": []
+      },
+      "pipeline": {
+        "total_latency_ms": 9672.754764556885
+      },
+      "errors": [],
+      "error_analysis": [
+        {
+          "field": "doctor",
+          "expected": "Dr. Amol Aandrao Patil",
+          "predicted": "(missing)",
+          "error_type": "missing",
+          "status": "field_not_extracted"
+        },
+        {
+          "field": "hospital",
+          "expected": "Nanavati Super Speciality Hospital",
+          "predicted": "(missing)",
+          "error_type": "missing",
+          "status": "field_not_extracted"
+        },
+        {
+          "field": "date",
+          "expected": "16/05/2021",
+          "predicted": "(missing)",
+          "error_type": "missing",
+          "status": "field_not_extracted"
+        },
+        {
+          "field": "diagnosis",
+          "expected": "",
+          "predicted": "(missing)",
+          "error_type": "missing",
+          "status": "field_not_extracted"
+        },
+        {
+          "field": "medicines",
+          "medicine": "Liposomal Amphotericin B",
+          "error_type": "missing",
+          "status": "not_extracted"
+        },
+        {
+          "field": "medicines",
+          "medicine": "Iy.yposom Aphotoin B",
+          "error_type": "extra",
+          "status": "hallucinated"
+        },
+        {
+          "field": "medicines",
+          "medicine": "sony",
+          "error_type": "extra",
+          "status": "hallucinated"
+        },
+        {
+          "field": "medicines",
+          "medicine": "Dbvinls",
+          "error_type": "extra",
+          "status": "hallucinated"
+        },
+        {
+          "field": "clinical_notes",
+          "expected": "",
+          "predicted": "(missing)",
+          "error_type": "missing",
+          "status": "field_not_extracted"
+        }
+      ],
+      "confusion_stats": {
+        "matched_after_normalization": 2,
+        "matched_by_fuzzy_similarity": 1,
+        "actually_incorrect": 3,
+        "missing": 6
+      }
+    },
+    {
+      "image": "prescription_3",
+      "status": "success",
+      "ocr": {
+        "latency_ms": 1141.6826248168945,
+        "cer": 0.802158273381295,
+        "wer": 0.9545454545454546,
+        "output_length": 291,
+        "ground_truth_length": 289
+      },
+      "information_extraction": {
+        "latency_ms": 6388.161897659302,
+        "field_accuracy": 0.125,
+        "precision": 0.3333333333333333,
+        "recall": 0.2,
+        "f1_score": 0.25,
+        "total_fields": 8,
+        "matched_fields": 1,
+        "missing_fields": [
+          "date",
+          "hospital",
+          "diagnosis",
+          "clinical_notes"
+        ],
+        "incorrect_fields": [
+          {
+            "field": "patient_name",
+            "expected": "Sachin Sansare",
+            "predicted": "Mi.Sachii Bansgae",
+            "similarity": 0.3870967741935484,
+            "status": "genuinely_different"
+          },
+          {
+            "field": "age",
+            "expected": "28",
+            "predicted": "20",
+            "similarity": 0.5,
+            "status": "value_mismatch"
+          }
+        ]
+      },
+      "pipeline": {
+        "total_latency_ms": 7529.844522476196
+      },
+      "errors": [],
+      "error_analysis": [
+        {
+          "field": "patient_name",
+          "expected": "Sachin Sansare",
+          "predicted": "Mi.Sachii Bansgae",
+          "similarity": "38.71%",
+          "error_type": "value_mismatch",
+          "status": "genuinely_different"
+        },
+        {
+          "field": "age",
+          "expected": "28",
+          "predicted": "20",
+          "similarity": "50.00%",
+          "error_type": "value_mismatch",
+          "status": "value_mismatch"
+        },
+        {
+          "field": "date",
+          "expected": "12/10/2022",
+          "predicted": "(missing)",
+          "error_type": "missing",
+          "status": "field_not_extracted"
+        },
+        {
+          "field": "hospital",
+          "expected": "The White Tusk Dental Clinic",
+          "predicted": "(missing)",
+          "error_type": "missing",
+          "status": "field_not_extracted"
+        },
+        {
+          "field": "diagnosis",
+          "expected": "",
+          "predicted": "(missing)",
+          "error_type": "missing",
+          "status": "field_not_extracted"
+        },
+        {
+          "field": "medicines",
+          "medicine": "Augmentin",
+          "error_type": "missing",
+          "status": "not_extracted"
+        },
+        {
+          "field": "medicines",
+          "medicine": "Pan-D",
+          "error_type": "missing",
+          "status": "not_extracted"
+        },
+        {
+          "field": "medicines",
+          "medicine": "Auqmentn",
+          "error_type": "extra",
+          "status": "hallucinated"
+        },
+        {
+          "field": "medicines",
+          "medicine": "Hexigel gum pant",
+          "error_type": "extra",
+          "status": "hallucinated"
+        },
+        {
+          "field": "clinical_notes",
+          "expected": "Hexigel Gum Paint massage for one week",
+          "predicted": "(missing)",
+          "error_type": "missing",
+          "status": "field_not_extracted"
+        }
+      ],
+      "confusion_stats": {
+        "matched_after_normalization": 1,
+        "matched_by_fuzzy_similarity": 0,
+        "actually_incorrect": 4,
+        "missing": 6
+      }
+    },
+    {
+      "image": "prescription_4",
+      "status": "success",
+      "ocr": {
+        "latency_ms": 2830.4829597473145,
+        "cer": 1.5401785714285714,
+        "wer": 0.96,
+        "output_length": 438,
+        "ground_truth_length": 234
+      },
+      "information_extraction": {
+        "latency_ms": 11369.74310874939,
+        "field_accuracy": 0.25,
+        "precision": 0.5,
+        "recall": 0.4,
+        "f1_score": 0.4444444444444445,
+        "total_fields": 8,
+        "matched_fields": 2,
+        "missing_fields": [
+          "doctor",
+          "hospital",
+          "date"
+        ],
+        "incorrect_fields": [
+          {
+            "field": "patient_name",
+            "expected": "Ajay Sethi",
+            "predicted": "MRATAY SetHI",
+            "similarity": 0.8181818181818181,
+            "status": "genuinely_different"
+          },
+          {
+            "field": "diagnosis",
+            "expected": "COVID positive",
+            "predicted": "CoUID+We",
+            "similarity": 0.8275862068965517,
+            "status": "genuinely_different"
+          }
+        ]
+      },
+      "pipeline": {
+        "total_latency_ms": 14200.226068496704
+      },
+      "errors": [],
+      "error_analysis": [
+        {
+          "field": "patient_name",
+          "expected": "Ajay Sethi",
+          "predicted": "MRATAY SetHI",
+          "similarity": "81.82%",
+          "error_type": "value_mismatch",
+          "status": "genuinely_different"
+        },
+        {
+          "field": "doctor",
+          "expected": "Dr. Ajay Sahdev",
+          "predicted": "(missing)",
+          "error_type": "missing",
+          "status": "field_not_extracted"
+        },
+        {
+          "field": "hospital",
+          "expected": "YourGP",
+          "predicted": "(missing)",
+          "error_type": "missing",
+          "status": "field_not_extracted"
+        },
+        {
+          "field": "date",
+          "expected": "24/04/2021",
+          "predicted": "(missing)",
+          "error_type": "missing",
+          "status": "field_not_extracted"
+        },
+        {
+          "field": "diagnosis",
+          "expected": "COVID positive",
+          "predicted": "CoUID+We",
+          "similarity": "82.76%",
+          "error_type": "value_mismatch",
+          "status": "genuinely_different"
+        },
+        {
+          "field": "medicines",
+          "medicine": "Remdec",
+          "error_type": "missing",
+          "status": "not_extracted"
+        }
+      ],
+      "confusion_stats": {
+        "matched_after_normalization": 2,
+        "matched_by_fuzzy_similarity": 0,
+        "actually_incorrect": 2,
+        "missing": 4
+      }
+    },
+    {
+      "image": "prescription_5",
+      "status": "success",
+      "ocr": {
+        "latency_ms": 1254.4353008270264,
+        "cer": 0.8,
+        "wer": 1.0,
+        "output_length": 327,
+        "ground_truth_length": 474
+      },
+      "information_extraction": {
+        "latency_ms": 11538.653373718262,
+        "field_accuracy": 0.1,
+        "precision": 0.25,
+        "recall": 0.14285714285714285,
+        "f1_score": 0.18181818181818182,
+        "total_fields": 10,
+        "matched_fields": 1,
+        "missing_fields": [
+          "patient_name",
+          "doctor",
+          "hospital",
+          "date",
+          "admission_status",
+          "hospital_stay"
+        ],
+        "incorrect_fields": [
+          {
+            "field": "age",
+            "expected": "62",
+            "predicted": "6dyr",
+            "similarity": 0.6666666666666665,
+            "status": "value_mismatch"
+          },
+          {
+            "field": "diagnosis",
+            "expected": "['Severe sepsis', 'MODS', 'Likely lung abscess', '",
+            "predicted": "pnmenia",
+            "similarity": 0.17721518987341767,
+            "status": "genuinely_different"
+          },
+          {
+            "field": "clinical_notes",
+            "expected": "Patient is undergoing ICU treatment and requires c",
+            "predicted": "piraton pnmenia).t tutu need iepital y rp enfom an",
+            "similarity": 0.4245810055865922,
+            "status": "genuinely_different"
+          }
+        ]
+      },
+      "pipeline": {
+        "total_latency_ms": 12793.088674545288
+      },
+      "errors": [],
+      "error_analysis": [
+        {
+          "field": "patient_name",
+          "expected": "CH. Samuel",
+          "predicted": "(missing)",
+          "error_type": "missing",
+          "status": "field_not_extracted"
+        },
+        {
+          "field": "age",
+          "expected": "62",
+          "predicted": "6dyr",
+          "similarity": "66.67%",
+          "error_type": "value_mismatch",
+          "status": "value_mismatch"
+        },
+        {
+          "field": "doctor",
+          "expected": "Dr. Naveen Polavarapu",
+          "predicted": "(missing)",
+          "error_type": "missing",
+          "status": "field_not_extracted"
+        },
+        {
+          "field": "hospital",
+          "expected": "Apollo Hospitals",
+          "predicted": "(missing)",
+          "error_type": "missing",
+          "status": "field_not_extracted"
+        },
+        {
+          "field": "date",
+          "expected": "24/08/2021",
+          "predicted": "(missing)",
+          "error_type": "missing",
+          "status": "field_not_extracted"
+        },
+        {
+          "field": "diagnosis",
+          "expected": "['Severe sepsis', 'MODS', 'Likely lung abscess', '",
+          "predicted": "pnmenia",
+          "similarity": "17.72%",
+          "error_type": "value_mismatch",
+          "status": "genuinely_different"
+        },
+        {
+          "field": "admission_status",
+          "expected": "Currently admitted in ICU",
+          "predicted": "(missing)",
+          "error_type": "missing",
+          "status": "field_not_extracted"
+        },
+        {
+          "field": "hospital_stay",
+          "expected": "8-10 days",
+          "predicted": "(missing)",
+          "error_type": "missing",
+          "status": "field_not_extracted"
+        },
+        {
+          "field": "clinical_notes",
+          "expected": "Patient is undergoing ICU treatment and requires c",
+          "predicted": "piraton pnmenia).t tutu need iepital y rp enfom an",
+          "similarity": "42.46%",
+          "error_type": "value_mismatch",
+          "status": "genuinely_different"
+        }
+      ],
+      "confusion_stats": {
+        "matched_after_normalization": 1,
+        "matched_by_fuzzy_similarity": 0,
+        "actually_incorrect": 3,
+        "missing": 6
+      }
+    }
+  ],
+  "error_analysis": [
+    {
+      "image": "prescription_1",
+      "field": "patient_name",
+      "expected": "Prathna",
+      "predicted": "ATH",
+      "similarity": "60.00%",
+      "error_type": "value_mismatch",
+      "status": "genuinely_different"
+    },
+    {
+      "image": "prescription_1",
+      "field": "date",
+      "expected": "15-03-2022",
+      "predicted": "(missing)",
+      "error_type": "missing",
+      "status": "field_not_extracted"
+    },
+    {
+      "image": "prescription_1",
+      "field": "diagnosis",
+      "expected": "['Acute GE', 'Dehydration']",
+      "predicted": "Acub Ge",
+      "similarity": "35.29%",
+      "error_type": "value_mismatch",
+      "status": "genuinely_different"
+    },
+    {
+      "image": "prescription_1",
+      "field": "medicines",
+      "medicine": "Azevac MR",
+      "error_type": "missing",
+      "status": "not_extracted"
+    },
+    {
+      "image": "prescription_1",
+      "field": "medicines",
+      "medicine": "Andial",
+      "error_type": "missing",
+      "status": "not_extracted"
+    },
+    {
+      "image": "prescription_1",
+      "field": "medicines",
+      "medicine": "Zofer",
+      "error_type": "missing",
+      "status": "not_extracted"
+    },
+    {
+      "image": "prescription_1",
+      "field": "medicines",
+      "medicine": "TA AZENAC-NR",
+      "error_type": "extra",
+      "status": "hallucinated"
+    },
+    {
+      "image": "prescription_1",
+      "field": "medicines",
+      "medicine": "TA ADIAL",
+      "error_type": "extra",
+      "status": "hallucinated"
+    },
+    {
+      "image": "prescription_1",
+      "field": "medicines",
+      "medicine": "TAZOFEL",
+      "error_type": "extra",
+      "status": "hallucinated"
+    },
+    {
+      "image": "prescription_1",
+      "field": "duration",
+      "expected": "3 days",
+      "predicted": "(missing)",
+      "error_type": "missing",
+      "status": "field_not_extracted"
+    },
+    {
+      "image": "prescription_2",
+      "field": "doctor",
+      "expected": "Dr. Amol Aandrao Patil",
+      "predicted": "(missing)",
+      "error_type": "missing",
+      "status": "field_not_extracted"
+    },
+    {
+      "image": "prescription_2",
+      "field": "hospital",
+      "expected": "Nanavati Super Speciality Hospital",
+      "predicted": "(missing)",
+      "error_type": "missing",
+      "status": "field_not_extracted"
+    },
+    {
+      "image": "prescription_2",
+      "field": "date",
+      "expected": "16/05/2021",
+      "predicted": "(missing)",
+      "error_type": "missing",
+      "status": "field_not_extracted"
+    },
+    {
+      "image": "prescription_2",
+      "field": "diagnosis",
+      "expected": "",
+      "predicted": "(missing)",
+      "error_type": "missing",
+      "status": "field_not_extracted"
+    },
+    {
+      "image": "prescription_2",
+      "field": "medicines",
+      "medicine": "Liposomal Amphotericin B",
+      "error_type": "missing",
+      "status": "not_extracted"
+    },
+    {
+      "image": "prescription_2",
+      "field": "medicines",
+      "medicine": "Iy.yposom Aphotoin B",
+      "error_type": "extra",
+      "status": "hallucinated"
+    },
+    {
+      "image": "prescription_2",
+      "field": "medicines",
+      "medicine": "sony",
+      "error_type": "extra",
+      "status": "hallucinated"
+    },
+    {
+      "image": "prescription_2",
+      "field": "medicines",
+      "medicine": "Dbvinls",
+      "error_type": "extra",
+      "status": "hallucinated"
+    },
+    {
+      "image": "prescription_2",
+      "field": "clinical_notes",
+      "expected": "",
+      "predicted": "(missing)",
+      "error_type": "missing",
+      "status": "field_not_extracted"
+    },
+    {
+      "image": "prescription_3",
+      "field": "patient_name",
+      "expected": "Sachin Sansare",
+      "predicted": "Mi.Sachii Bansgae",
+      "similarity": "38.71%",
+      "error_type": "value_mismatch",
+      "status": "genuinely_different"
+    },
+    {
+      "image": "prescription_3",
+      "field": "age",
+      "expected": "28",
+      "predicted": "20",
+      "similarity": "50.00%",
+      "error_type": "value_mismatch",
+      "status": "value_mismatch"
+    },
+    {
+      "image": "prescription_3",
+      "field": "date",
+      "expected": "12/10/2022",
+      "predicted": "(missing)",
+      "error_type": "missing",
+      "status": "field_not_extracted"
+    },
+    {
+      "image": "prescription_3",
+      "field": "hospital",
+      "expected": "The White Tusk Dental Clinic",
+      "predicted": "(missing)",
+      "error_type": "missing",
+      "status": "field_not_extracted"
+    },
+    {
+      "image": "prescription_3",
+      "field": "diagnosis",
+      "expected": "",
+      "predicted": "(missing)",
+      "error_type": "missing",
+      "status": "field_not_extracted"
+    },
+    {
+      "image": "prescription_3",
+      "field": "medicines",
+      "medicine": "Augmentin",
+      "error_type": "missing",
+      "status": "not_extracted"
+    },
+    {
+      "image": "prescription_3",
+      "field": "medicines",
+      "medicine": "Pan-D",
+      "error_type": "missing",
+      "status": "not_extracted"
+    },
+    {
+      "image": "prescription_3",
+      "field": "medicines",
+      "medicine": "Auqmentn",
+      "error_type": "extra",
+      "status": "hallucinated"
+    },
+    {
+      "image": "prescription_3",
+      "field": "medicines",
+      "medicine": "Hexigel gum pant",
+      "error_type": "extra",
+      "status": "hallucinated"
+    },
+    {
+      "image": "prescription_3",
+      "field": "clinical_notes",
+      "expected": "Hexigel Gum Paint massage for one week",
+      "predicted": "(missing)",
+      "error_type": "missing",
+      "status": "field_not_extracted"
+    },
+    {
+      "image": "prescription_4",
+      "field": "patient_name",
+      "expected": "Ajay Sethi",
+      "predicted": "MRATAY SetHI",
+      "similarity": "81.82%",
+      "error_type": "value_mismatch",
+      "status": "genuinely_different"
+    },
+    {
+      "image": "prescription_4",
+      "field": "doctor",
+      "expected": "Dr. Ajay Sahdev",
+      "predicted": "(missing)",
+      "error_type": "missing",
+      "status": "field_not_extracted"
+    },
+    {
+      "image": "prescription_4",
+      "field": "hospital",
+      "expected": "YourGP",
+      "predicted": "(missing)",
+      "error_type": "missing",
+      "status": "field_not_extracted"
+    },
+    {
+      "image": "prescription_4",
+      "field": "date",
+      "expected": "24/04/2021",
+      "predicted": "(missing)",
+      "error_type": "missing",
+      "status": "field_not_extracted"
+    },
+    {
+      "image": "prescription_4",
+      "field": "diagnosis",
+      "expected": "COVID positive",
+      "predicted": "CoUID+We",
+      "similarity": "82.76%",
+      "error_type": "value_mismatch",
+      "status": "genuinely_different"
+    },
+    {
+      "image": "prescription_4",
+      "field": "medicines",
+      "medicine": "Remdec",
+      "error_type": "missing",
+      "status": "not_extracted"
+    },
+    {
+      "image": "prescription_5",
+      "field": "patient_name",
+      "expected": "CH. Samuel",
+      "predicted": "(missing)",
+      "error_type": "missing",
+      "status": "field_not_extracted"
+    },
+    {
+      "image": "prescription_5",
+      "field": "age",
+      "expected": "62",
+      "predicted": "6dyr",
+      "similarity": "66.67%",
+      "error_type": "value_mismatch",
+      "status": "value_mismatch"
+    },
+    {
+      "image": "prescription_5",
+      "field": "doctor",
+      "expected": "Dr. Naveen Polavarapu",
+      "predicted": "(missing)",
+      "error_type": "missing",
+      "status": "field_not_extracted"
+    },
+    {
+      "image": "prescription_5",
+      "field": "hospital",
+      "expected": "Apollo Hospitals",
+      "predicted": "(missing)",
+      "error_type": "missing",
+      "status": "field_not_extracted"
+    },
+    {
+      "image": "prescription_5",
+      "field": "date",
+      "expected": "24/08/2021",
+      "predicted": "(missing)",
+      "error_type": "missing",
+      "status": "field_not_extracted"
+    },
+    {
+      "image": "prescription_5",
+      "field": "diagnosis",
+      "expected": "['Severe sepsis', 'MODS', 'Likely lung abscess', '",
+      "predicted": "pnmenia",
+      "similarity": "17.72%",
+      "error_type": "value_mismatch",
+      "status": "genuinely_different"
+    },
+    {
+      "image": "prescription_5",
+      "field": "admission_status",
+      "expected": "Currently admitted in ICU",
+      "predicted": "(missing)",
+      "error_type": "missing",
+      "status": "field_not_extracted"
+    },
+    {
+      "image": "prescription_5",
+      "field": "hospital_stay",
+      "expected": "8-10 days",
+      "predicted": "(missing)",
+      "error_type": "missing",
+      "status": "field_not_extracted"
+    },
+    {
+      "image": "prescription_5",
+      "field": "clinical_notes",
+      "expected": "Patient is undergoing ICU treatment and requires c",
+      "predicted": "piraton pnmenia).t tutu need iepital y rp enfom an",
+      "similarity": "42.46%",
+      "error_type": "value_mismatch",
+      "status": "genuinely_different"
+    }
+  ]
+}

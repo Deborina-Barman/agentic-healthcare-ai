@@ -1,0 +1,28 @@
+Hospital:
+Apollo Hospitals
+
+Doctor:
+Dr. Naveen Polavarapu
+
+Date:
+24/08/2021
+
+To Whomsoever It May Concern
+
+This is to inform that Mr. CH. Samuel,
+62 years / Male,
+
+is currently admitted under my care with
+IP No: 367588.
+
+He is currently undergoing treatment in ICU
+for severe sepsis with MODS
+(likely lung abscess with aspiration pneumonia).
+
+He further needs hospital stay
+for about 8–10 days
+for complete recovery.
+
+This is to inform and kindly do the needful.
+
+Thank You.

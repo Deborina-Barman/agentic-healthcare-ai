@@ -1,0 +1,31 @@
+{
+  "patient_name": "Sachin Sansare",
+  "age": "28",
+  "gender": "Male",
+  "date": "12/10/2022",
+  "hospital": "The White Tusk Dental Clinic",
+  "diagnosis": "",
+  "medicines": [
+    {
+      "name": "Augmentin",
+      "strength": "625 mg",
+      "frequency": "1-0-1",
+      "duration": "5 days",
+      "timing": "After meals"
+    },
+    {
+      "name": "Enzoflam",
+      "frequency": "1-0-1",
+      "duration": "5 days",
+      "timing": "After meals"
+    },
+    {
+      "name": "Pan-D",
+      "strength": "40 mg",
+      "frequency": "1-0-0",
+      "duration": "5 days",
+      "timing": "Before meals"
+    }
+  ],
+  "clinical_notes": "Hexigel Gum Paint massage for one week"
+}
